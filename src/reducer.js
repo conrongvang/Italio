@@ -131,7 +131,9 @@ const init = {
       'https://italio.vn/wp-content/uploads/2021/08/italio-decor-1.jpg',
       'https://italio.vn/wp-content/uploads/2021/04/1.png'
     ],
-
+  },
+  cart: {
+    number: 3
   }
 };
 

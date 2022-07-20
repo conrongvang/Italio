@@ -7,10 +7,6 @@ function App() {
   return html`
     ${Navbar()}
     ${Content()}
-    ${undefined}
-    ${null}
-    ${0}
-    ${NaN}
   `;
 }
 

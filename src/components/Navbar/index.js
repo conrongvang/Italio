@@ -1,30 +1,8 @@
 import html from "../../core.js";
 import { connect } from "../../store.js";
+import Select from '../base/Select.js';
 
-/*
-    function () {}
-    <==>
-    () => {} --> arrow function
-
-    C1: function ten_ham() {
-        // Do something
-    }
-
-    C2: const ten_ham = () => {}
-
-
-    menu.map(function (value, index) {
-
-    })
-    <==>
-    for (let i = 0; i < menu.length; i++) {
-        menu[i] <==> value
-        i <==> index
-        // Do something
-    }
-*/
-
-function Navbar({ menu }) {
+function Navbar({ menu, cart }) {
     return html`
         <div class='navbar'>
             <div class='navbar__introduce'>
@@ -35,19 +13,23 @@ function Navbar({ menu }) {
             </div>
             <div class='navbar__bar'>
                 <img class='navbar__bar--logo' src='https://italio.vn/wp-content/uploads/2021/05/logooo-90x55.png'></img>
-                <div class='menu'>
+                <div class='navbar__bar--menu'>
                     ${(menu || []).map(i => html`
-                        <div ${i.id ? `title=${i.id}` : ''} class='menu__item'>
-                            <a href=${i.link || '#'} class='menu__item--link'>
+                        <div ${i.id ? `title=${i.id}` : ''} class='navbar__bar--item'>
+                            <a href=${i.link || '#'} class='navbar__bar--item link'>
                                 ${i.title}
                             </a>
                             ${i.children && i.children.length
                                 && i.children.map(c => Select({ ...c, level: 1 }))
+                                && '<i class="fa fa-arrow-down" aria-hidden="true"></i>'
                             }
                         </div>
                     `)}
                 </div>
-                <i class="fa fa-shopping-bag" style="font-size:36px;"></i>
+                <div class='navbar__bar--cart'>
+                    <i class="fa fa-suitcase" aria-hidden="true"></i>
+                    <a href='https://italio.vn/cart/'>${cart.number}<a/>
+                </div>
             </div>
         </div>
     `;

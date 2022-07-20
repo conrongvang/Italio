@@ -1,7 +1,7 @@
 import html from "../../core.js";
 
 function Select(props) {
-    const { className, level, link, title, children } = props;
+    const { level, link, title, children } = props;
 
     return html`
         <div class=select title=${'select-menu-item-level-' + level}>
@@ -11,6 +11,7 @@ function Select(props) {
                 && children.map(c =>
                     html`${Select({ ...c, level: level + 1 })}`
                 )
+                && '<i class="fa fa-arrow-down" aria-hidden="true"></i>'
             }
         </div>
     `;
