@@ -46,6 +46,18 @@
 
 .navbar__bar--item:hover {
     cursor: pointer;
+    color: #26427C;
+    animation-duration: 1s;
+    transform: scale(1.2);
+    transition: all .3s ease;
+}
+
+.navbar__bar--item:hover > .select {
+    display: block;
+}
+
+.navbar__bar--item:hover > .select:hover > .select {
+    display: block;
 }
 
 .navbar__bar--cart {
