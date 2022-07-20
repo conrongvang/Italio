@@ -27,26 +27,27 @@ import { connect } from "../../store.js";
 function Navbar({ menu }) {
     return html`
         <div class='navbar'>
-            <div class='introduce'>
+            <div class='navbar__introduce'>
                 <p>Italio - Nhà sản xuất kem chuyên cung cấp kem Ý, kem cao cấp, máy làm kem,...</p>
-                <a href='https://https://italio.vn/'>Dùng thử miễn phí</a>
+                <div class='navbar__introduce--try-free'>
+                    <a href='https://italio.vn/'>Dùng Thử Miễn Phí</a>
+                </div>
             </div>
-            <div class='menu'>
-            <i class="fa fa-shopping-bag" style="font-size:36px;"></i>
-                ${menu.map(i => {
-                    let children = [];
-                    if (i.children && i.children.length) {
-                        children = [...i.children];
-                    }
-
-                    return `
-                        <div>
-                            <a href=${i.link}>
+            <div class='navbar__bar'>
+                <img class='navbar__bar--logo' src='https://italio.vn/wp-content/uploads/2021/05/logooo-90x55.png'></img>
+                <div class='menu'>
+                    ${(menu || []).map(i => html`
+                        <div ${i.id ? `title=${i.id}` : ''} class='menu__item'>
+                            <a href=${i.link || '#'} class='menu__item--link'>
                                 ${i.title}
                             </a>
+                            ${i.children && i.children.length
+                                && i.children.map(c => Select({ ...c, level: 1 }))
+                            }
                         </div>
-                    `;
-                })}
+                    `)}
+                </div>
+                <i class="fa fa-shopping-bag" style="font-size:36px;"></i>
             </div>
         </div>
     `;
