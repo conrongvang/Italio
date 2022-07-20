@@ -1,2 +1,7 @@
 @import url(navbar.css);
 @import url(content.css);
+@import url(select.css);
+
+body {
+    margin: 0;
+}

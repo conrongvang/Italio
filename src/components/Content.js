@@ -1,6 +1,6 @@
 import html from "../core.js";
 import { connect } from "../store.js";
-import Product from "./Menu/Product.js";
+import Product from "./Navbar/Product.js";
 
 function Content(props) {
     return html`
