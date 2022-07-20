@@ -18,6 +18,8 @@ const init = {
           title: 'Về CEO',
           link: 'https://italio.vn/ve-ceo-phan-trung-du/'
         }
+        
+         
       ]
     },
     {
@@ -97,7 +99,20 @@ const init = {
       link: 'https://italio.vn/du-an-kem-tuoi/'
     }
   ],
-  products: storage.get('products') || []
+  products: storage.get('products') || [],
+  home: {
+    ownerProducts: [
+      'https://italio.vn/wp-content/uploads/2021/08/icon.png',
+      'https://italio.vn/wp-content/uploads/2021/07/icon2.png',
+      'https://italio.vn/wp-content/uploads/2021/07/Icon-2.png',
+      'https://italio.vn/wp-content/uploads/2021/07/icon-.png'
+    ],
+    productionIntroduce:[
+      'https://italio.vn/wp-content/uploads/2021/08/italio-decor-1.jpg',
+      'https://italio.vn/wp-content/uploads/2021/04/1.png'
+    ],
+
+  }
 };
 
 const actions = {

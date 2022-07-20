@@ -1,6 +1,28 @@
 import html from "../../core.js";
 import { connect } from "../../store.js";
-import Select from '../base/Select.js';
+
+/*
+    function () {}
+    <==>
+    () => {} --> arrow function
+
+    C1: function ten_ham() {
+        // Do something
+    }
+
+    C2: const ten_ham = () => {}
+
+
+    menu.map(function (value, index) {
+
+    })
+    <==>
+    for (let i = 0; i < menu.length; i++) {
+        menu[i] <==> value
+        i <==> index
+        // Do something
+    }
+*/
 
 function Navbar({ menu }) {
     return html`
@@ -10,6 +32,7 @@ function Navbar({ menu }) {
                 <a href='https://https://italio.vn/'>Dùng thử miễn phí</a>
             </div>
             <div class='menu'>
+            <i class="fa fa-shopping-bag" style="font-size:36px;"></i>
                 ${menu.map(i => {
                     let children = [];
                     if (i.children && i.children.length) {
@@ -17,11 +40,13 @@ function Navbar({ menu }) {
                     }
 
                     return `
-                    <a href=${i.link}>
-                        ${i.title}
-                    </a>
-                    ${children.map(c => Select(c))}
-                `})}
+                        <div>
+                            <a href=${i.link}>
+                                ${i.title}
+                            </a>
+                        </div>
+                    `;
+                })}
             </div>
         </div>
     `;
