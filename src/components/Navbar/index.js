@@ -1,6 +1,28 @@
 import html from "../../core.js";
 import { connect } from "../../store.js";
-import Select from '../base/Select.js';
+
+/*
+    function () {}
+    <==>
+    () => {} --> arrow function
+
+    C1: function ten_ham() {
+        // Do something
+    }
+
+    C2: const ten_ham = () => {}
+
+
+    menu.map(function (value, index) {
+
+    })
+    <==>
+    for (let i = 0; i < menu.length; i++) {
+        menu[i] <==> value
+        i <==> index
+        // Do something
+    }
+*/
 
 function Navbar({ menu }) {
     return html`
@@ -25,10 +47,10 @@ function Navbar({ menu }) {
                         </div>
                     `)}
                 </div>
+                <i class="fa fa-shopping-bag" style="font-size:36px;"></i>
             </div>
         </div>
     `;
 }
-// ${i.children && i.children.length && Children(i.children, 1)}
 
 export default connect()(Navbar);
