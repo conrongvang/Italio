@@ -1,3 +1,34 @@
 .navbar {
-    background: #0274be;
+}
+
+.navbar__introduce {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15%;
+    background: linear-gradient(to right, #43bac1, #42b9c1, #26427c);
+}
+
+.navbar__introduce p {
+    color: white;
+}
+
+.navbar__introduce--try-free {
+    padding: 10px 40px;
+    background: white;
+    border-radius: 8px;
+}
+
+.navbar__introduce--try-free a {
+    text-decoration-line: none;
+    color: #43bac1;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-around;
+}
+
+.menu__item {
+
 }
