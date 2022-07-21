@@ -144,7 +144,10 @@ const actions = {
       ...state[key],
       data
     ];
-
+    storage.set(key, state[key]);
+  },
+  remove(state, { key, id }) {
+    state[key] = state[key].filter(i => i.id === id);
     storage.set(key, state[key]);
   },
   display(state, payload) {
