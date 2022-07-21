@@ -40,7 +40,5 @@ function Navbar({ menu, cart }) {
         </div>
     `;
 }
-{/* <div class='modal'>
-${i.children.map(c => Select({ ...c, level: 1 }))}
-</div> */}
+
 export default connect()(Navbar);
