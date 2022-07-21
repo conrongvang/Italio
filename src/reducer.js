@@ -24,9 +24,9 @@ const init = {
       ]
     },
     {
-      id: 'product',
+      id: 'products',
       title: 'Sản phẩm',
-      link: 'https://italio.vn/cua-hang/',
+      link: '#',
       children: [
         {
           id: 'cream',
@@ -117,7 +117,6 @@ const init = {
       link: 'https://italio.vn/du-an-kem-tuoi/'
     }
   ],
-  products: storage.get('products') || [],
   home: {
     ownerProducts: [
       'https://italio.vn/wp-content/uploads/2021/08/icon.png',
@@ -130,16 +129,31 @@ const init = {
       'https://italio.vn/wp-content/uploads/2021/04/1.png'
     ],
   },
-  cart: {
-    number: 3
+  products: storage.get('products') || [],
+  cart: storage.get('cart') || [],
+  display: {
+    products: false,
+    cart: false,
+    home: true
   }
 };
 
 const actions = {
-  add(state, payload) {
-    if (state && state.products && payload) {
-      state.products.push({ payload });
-      storage.set(state.products);
+  add(state, { key, data }) {
+    state[key] = [
+      ...state[key],
+      data
+    ];
+
+    storage.set(key, state[key]);
+  },
+  display(state, payload) {
+    for (const property in state.display) {
+      if (property === payload) {
+        state.display[property] = true;
+      } else {
+        state.display[property] = false;
+      }
     }
   }
 };
@@ -147,19 +161,4 @@ const actions = {
 export default function reducer(state = init, action, args) {
   actions[action] && actions[action](state, ...args);
   return state;
-  // switch (action) {
-  //   case "ADD":
-  //     const [title] = args;
-  //     return {
-  //       ...state,
-  //       products: [
-  //         ...state.products,
-  //         {
-  //           title
-  //         }
-  //       ]
-  //     };
-  //   default:
-  //     return state;
-  // }
 }

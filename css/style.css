@@ -2,6 +2,9 @@
 @import url(content.css);
 @import url(select.css);
 @import url(modal.css);
+@import url(products.css);
+@import url(product.css);
+@import url(cart.css);
 
 body {
     margin: 0;

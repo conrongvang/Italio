@@ -3,6 +3,7 @@
     position: sticky;
     top: 0;
     z-index: 1;
+    background: white;
 }
 
 .navbar__bar {
@@ -99,8 +100,23 @@
     z-index: 0;
 }
 
-.navbar__bar--cart:hover a {
+.navbar__bar--cart span {
+    position: absolute;
+    color: #0274be;
+    top: 34%;
+    right: 30%;
+    text-decoration-line: none;
+}
+
+.navbar__bar--cart:hover span {
     color: white;
+}
+
+.navbar__bar--cart i {
+    font-size: 40px;
+    -webkit-text-fill-color: white;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #0274be;
 }
 
 .navbar__bar--cart:hover i {
@@ -109,19 +125,6 @@
     -webkit-text-stroke-color: #0274be;
 }
 
-.navbar__bar--cart i {
-    font-size:36px;
-    -webkit-text-fill-color: white;
-    -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: #0274be;
-}
-
-.navbar__bar--cart a {
-    position: absolute;
-    color: #0274be;
-    right: 45%;
-    top: 45%;
-    right: 38%;
-    top: 32%;
-    text-decoration-line: none;
+.navbar__bar--logo:hover {
+    cursor: pointer;
 }

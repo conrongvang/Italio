@@ -1,4 +1,4 @@
-import html from "../../core.js";
+import html from "../core.js";
 
 function Product(props) {
     return html`
