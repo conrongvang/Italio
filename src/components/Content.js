@@ -1,8 +1,9 @@
 import html from "../core.js";
 import { connect } from "../store.js";
-import Product from "./Navbar/Product.js";
+import Product from "./Product.js";
 
 function Content(props) {
+    console.log('props: ', props)
     let imgs = [];
     let imgs_gt=[];
 
@@ -17,7 +18,11 @@ function Content(props) {
         <div class='folder'>
             <h3 style="color:#0693e3;">SẢN PHẨM CỦA CHÚNG TÔI</h3>
             ${imgs.map(src => html`<img src=${src} width="300" height="225"></img>`)}
-            ${props && props.products && props.products.map(p => Product(p))}
+            ${
+                props
+                && props.products
+                && props.products.map(p => Product(p))
+            }
             <p> về chúng tôi</p>
             <h1 style="color:#0693e3;"> italio - Công Ty Sản Xuất Kem Ý Gelato </h1>
          

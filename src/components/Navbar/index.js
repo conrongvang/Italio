@@ -1,6 +1,7 @@
 import html from "../../core.js";
 import { connect } from "../../store.js";
-import Select from '../base/Select.js';
+import Select from '../base/Select.js'
+import Modal from '../base/Modal.js'
 
 function Navbar({ menu, cart }) {
     return html`
@@ -12,34 +13,42 @@ function Navbar({ menu, cart }) {
                 </div>
             </div>
             <div class='navbar__bar'>
-                <img class='navbar__bar--logo' src='https://italio.vn/wp-content/uploads/2021/05/logooo-90x55.png'></img>
+                <img
+                    class='navbar__bar--logo'
+                    src='https://italio.vn/wp-content/uploads/2021/05/logooo-90x55.png'
+                    onclick="dispatch('display', 'home')"
+                ></img>
                 <div class='navbar__bar--menu'>
                     ${(menu || []).map(i => {
                         return html`
                             <div
                                 ${i.id ? `id=${i.id}` : ''}
                                 class='navbar__bar--item'
+                                onclick="dispatch('display', '${i.id}')"
                             >
                                 <a href=${i.link || '#'} class='navbar__bar--item link'>
                                     ${i.title}
                                 </a>
-                                ${i.children && i.children.length
-                                    && i.children.map(c => Select({ ...c, level: 1 }))
-                                }
-                                ${i.children && i.children.length
-                                    && '<i class="fa fa-arrow-down" aria-hidden="true"></i>'
-                                }
+                                ${i.children && i.children.length && html`
+                                    ${Modal(i.children.map(c => Select({ ...c, level: 1 })))}
+                                    <i class="fa fa-arrow-down" aria-hidden="true"></i>
+                                `}
                             </div>
                         `;
                     })}
-                    <div class='navbar__bar--item test'>
-                        <a href='#'>Test</a>
-                        <div class='select'>cccc</div>
-                    </div>
                 </div>
-                <div class='navbar__bar--cart'>
+                <div
+                    class='navbar__bar--cart'
+                    onclick="dispatch('display', 'cart')"
+                >
                     <i class="fa fa-suitcase" aria-hidden="true"></i>
-                    <a href='https://italio.vn/cart/'>${cart.number}<a/>
+                    <span>
+                        ${
+                            cart.length < 10
+                            ? `0${cart.length !== 0 ? cart.length : ''}`
+                            : cart.length
+                        }
+                    </span>
                 </div>
             </div>
         </div>

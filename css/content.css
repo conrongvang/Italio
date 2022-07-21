@@ -1,16 +1,14 @@
 .content {
-    background:white;
-    
+    background: white;
 }
+
 .folder {
     color: #43BAC1;
     font-size: 20px;
     text-align: center;
-
-
 }
+
 .grid-container {
-  
     display: grid;
     grid-template-columns: auto auto;
     justify-content: space-evenly;
@@ -18,17 +16,12 @@
     justify-items: center;
     align-content: stretch;
 }
-  .grid-container > div {
-  
+
+.grid-container>div {
     text-align: center;
-  }
-  
-  .item1 {
+}
+
+.item1 {
     grid-row-start: 1;
     grid-row-end: 3;
-    
-    
-  }
-
-
-
+}
