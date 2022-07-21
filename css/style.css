@@ -1,6 +1,7 @@
 @import url(navbar.css);
 @import url(content.css);
 @import url(select.css);
+@import url(modal.css);
 
 body {
     margin: 0;

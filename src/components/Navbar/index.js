@@ -1,6 +1,7 @@
 import html from "../../core.js";
 import { connect } from "../../store.js";
 import Select from '../base/Select.js'
+import Modal from '../base/Modal.js'
 
 function Navbar({ menu, cart }) {
     return html`
@@ -23,27 +24,23 @@ function Navbar({ menu, cart }) {
                                 <a href=${i.link || '#'} class='navbar__bar--item link'>
                                     ${i.title}
                                 </a>
-                                ${i.children && i.children.length
-                                    && i.children.map(c => Select({ ...c, level: 1 }))
-                                }
-                                ${i.children && i.children.length
-                                    && '<i class="fa fa-arrow-down" aria-hidden="true"></i>'
-                                }
+                                ${i.children && i.children.length && html`
+                                    ${Modal(i.children.map(c => Select({ ...c, level: 1 })))}
+                                    <i class="fa fa-arrow-down" aria-hidden="true"></i>
+                                `}
                             </div>
                         `;
                     })}
-                    <div class='navbar__bar--item test'>
-                        <a href='#'>Test</a>
-                        <div class='select'>cccc</div>
-                    </div>
                 </div>
                 <div class='navbar__bar--cart'>
                     <i class="fa fa-suitcase" aria-hidden="true"></i>
-                    <a href='https://italio.vn/cart/'>${cart.number}<a/>
+                    <a href='https://italio.vn/cart/'>${cart.number}</a>
                 </div>
             </div>
         </div>
     `;
 }
-
+{/* <div class='modal'>
+${i.children.map(c => Select({ ...c, level: 1 }))}
+</div> */}
 export default connect()(Navbar);

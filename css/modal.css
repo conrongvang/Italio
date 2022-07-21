@@ -1,0 +1,20 @@
+.modal {
+    display: none;
+    position: absolute;
+    box-shadow: 0 4px 10px -2px rgb(0 0 0 / 10%);
+    width: max-content;
+    background-color: white;
+    text-decoration-line: none;
+    transition: opacity .2s ease,visibility .2s ease,transform .2s ease;
+}
+
+.modal > * {
+    padding: 14px 16px;
+}
+
+.modal > *:hover .modal {
+    display: grid;
+    top: 0;
+    left: 100%;
+    transition: opacity .2s ease,visibility .2s ease,transform .2s ease;
+}

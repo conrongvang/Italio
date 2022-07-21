@@ -1,5 +1,8 @@
 .navbar {
     border-bottom: 4px rgba(225,193,193,0.44) solid;
+    position: sticky;
+    top: 0;
+    z-index: 1;
 }
 
 .navbar__bar {
@@ -28,6 +31,10 @@
     border-radius: 8px;
 }
 
+.navbar__introduce--try-free:hover {
+    cursor: pointer;
+}
+
 .navbar__introduce--try-free a {
     text-decoration-line: none;
     color: #43bac1;
@@ -42,22 +49,45 @@
 .navbar__bar--item {
     text-decoration-line: none;
     color: #43BAC1;
+    vertical-align: middle;
 }
 
 .navbar__bar--item:hover {
     cursor: pointer;
     color: #26427C;
     animation-duration: 1s;
-    transform: scale(1.2);
+    transition: all .3s ease;
+    transform: scale(1);
+}
+
+.navbar__bar--item:hover > a {
+    color: #26427C;
+    font-size: calc(15px * 1.2);
+    animation-duration: 1s;
     transition: all .3s ease;
 }
 
-.navbar__bar--item:hover > .select {
-    display: block;
+.navbar__bar--item:hover > .modal {
+    display: grid;
+    left: -20%;
+    color: #43bac1;
 }
 
-.navbar__bar--item:hover > .select:hover > .select {
-    display: block;
+.navbar__bar--item:hover > .modal * {
+    color: #43bac1;
+}
+
+.navbar__bar--item:hover > .modal > *:hover > * {
+    color: #26427C;
+}
+
+.navbar__bar--item:hover > .modal > *:hover > .modal > *:hover > * {
+    color: #26427C;
+}
+
+.navbar__bar--item i {
+    margin-left: 7px;
+    font-size: 11px;
 }
 
 .navbar__bar--cart {
@@ -66,13 +96,14 @@
 
 .navbar__bar--cart:hover {
     cursor: pointer;
+    z-index: 0;
 }
 
 .navbar__bar--cart:hover a {
     color: white;
 }
 
-.navbar__bar--cart i:hover {
+.navbar__bar--cart:hover i {
     -webkit-text-fill-color: #0274be;
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: #0274be;
