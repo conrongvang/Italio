@@ -7,10 +7,28 @@
     font-size: 20px;
     text-align: center;
 
+
 }
+.grid-container {
+  
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-evenly;
+    align-items: stretch;
+    justify-items: center;
+    align-content: stretch;
+}
+  .grid-container > div {
+  
+    text-align: center;
+  }
+  
+  .item1 {
+    grid-row-start: 1;
+    grid-row-end: 3;
     
-
-
+    
+  }
 
 
 
