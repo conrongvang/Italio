@@ -1,5 +1,6 @@
 import html from "../../core.js";
 import { connect } from "../../store.js";
+import Select from '../base/Select.js'
 
 /*
     function () {}

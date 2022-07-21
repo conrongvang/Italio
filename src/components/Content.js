@@ -20,21 +20,18 @@ function Content(props) {
             ${props && props.products && props.products.map(p => Product(p))}
             <p> về chúng tôi</p>
             <h1 style="color:#0693e3;"> italio - Công Ty Sản Xuất Kem Ý Gelato </h1>
-            ${imgs_gt.map(src => html`<img src=${src} width="450" height="450"></img>`)}
-            ${props && props.productionIntroduce && props.productionIntroduce.map(p =>productionIntroduce(p))}
             
-            <h3  style ="
-            padding: 10px;
-            width: 350px;
-            height: 350px;
-            text-align: justify;">
-            Với triết lí, chất lượng sản phẩm là linh hồn của thương hiệu.
-            ITALIO luôn giữ vững và ngày
-            càng phát triển thêm nhiều hương vị,
-            đa dạng sự lựa chọn cho thực khách, mong muốn
-            mang những viên kem ngon,bổ dưỡng tới tất cả 
-           các cửa hàng trên toàn quốc, để mỗi ly kem đưa
-           tới khách hàng là những ly kem ý gelato chất lượng tuyệt hảo !<h3>
+            <p> <img src="https://italio.vn/wp-content/uploads/2021/08/italio-decor-1.jpg
+            "  width="450" height="450" "margin-right:78px;">
+            
+             Với triết lí, chất lượng sản phẩm là linh hồn của thương hiệu.
+                        ITALIO luôn giữ vững và ngày
+                        càng phát triển thêm nhiều hương vị,
+                        đa dạng sự lựa chọn cho thực khách, mong muốn
+                        mang những viên kem ngon,bổ dưỡng tới tất cả 
+                       các cửa hàng trên toàn quốc, để mỗi ly kem đưa
+                       tới khách hàng là những ly kem ý gelato chất lượng tuyệt hảo .</p>
+
         </div>
         </div>
     `;
