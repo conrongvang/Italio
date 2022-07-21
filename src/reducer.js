@@ -21,8 +21,6 @@ const init = {
           title: 'Về CEO',
           link: 'https://italio.vn/ve-ceo-phan-trung-du/'
         }
-        
-         
       ]
     },
     {
@@ -87,7 +85,7 @@ const init = {
             {
               id: 'cabinet-cake',
               title: 'Tủ trưng bày bánh',
-              linhk: 'https://italio.vn/tu-trung-bay-banh/'
+              link: 'https://italio.vn/tu-trung-bay-banh/'
             }
           ]
         },
@@ -131,7 +129,9 @@ const init = {
       'https://italio.vn/wp-content/uploads/2021/08/italio-decor-1.jpg',
       'https://italio.vn/wp-content/uploads/2021/04/1.png'
     ],
-
+  },
+  cart: {
+    number: 3
   }
 };
 

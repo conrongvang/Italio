@@ -1,4 +1,13 @@
 .navbar {
+    border-bottom: 4px rgba(225,193,193,0.44) solid;
+}
+
+.navbar__bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 15%;
+    height: 100px;
 }
 
 .navbar__introduce {
@@ -24,11 +33,64 @@
     color: #43bac1;
 }
 
-.menu {
+.navbar__bar--menu {
     display: flex;
     justify-content: space-around;
+    width: 70%;
 }
 
-.menu__item {
+.navbar__bar--item {
+    text-decoration-line: none;
+    color: #43BAC1;
+}
 
+.navbar__bar--item:hover {
+    cursor: pointer;
+    color: #26427C;
+    animation-duration: 1s;
+    transform: scale(1.2);
+    transition: all .3s ease;
+}
+
+.navbar__bar--item:hover > .select {
+    display: block;
+}
+
+.navbar__bar--item:hover > .select:hover > .select {
+    display: block;
+}
+
+.navbar__bar--cart {
+    position: relative;
+}
+
+.navbar__bar--cart:hover {
+    cursor: pointer;
+}
+
+.navbar__bar--cart:hover a {
+    color: white;
+}
+
+.navbar__bar--cart i:hover {
+    -webkit-text-fill-color: #0274be;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #0274be;
+}
+
+.navbar__bar--cart i {
+    font-size:36px;
+    -webkit-text-fill-color: white;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #0274be;
+}
+
+.navbar__bar--cart a {
+    position: absolute;
+    color: #0274be;
+    right: 45%;
+    top: 45%;
+    right: 38%;
+    top: 32%;
+    text-decoration-line: none;
 }
