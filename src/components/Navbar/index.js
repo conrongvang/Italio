@@ -1,6 +1,10 @@
 import html from "../../core.js";
 import { connect } from "../../store.js";
+<<<<<<< HEAD
+import Select from '../base/Select.js'
+=======
 import Select from '../base/Select.js';
+>>>>>>> a48e96a267a2de531639cbfc1652f675c4b62f71
 
 function Navbar({ menu, cart }) {
     return html`
