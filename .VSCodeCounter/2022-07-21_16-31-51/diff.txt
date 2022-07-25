@@ -1,0 +1,50 @@
+Date : 2022-07-21 16:31:51
+Directory : c:\Users\chuga\Documents\Italio
+Total : 19 files,  179 codes, -15 comments, 29 blanks, all 193 lines
+
+Languages
++------------+------------+------------+------------+------------+------------+
+| language   | files      | code       | comment    | blank      | total      |
++------------+------------+------------+------------+------------+------------+
+| JavaScript |         11 |        111 |        -15 |         10 |        106 |
+| CSS        |          8 |         68 |          0 |         19 |         87 |
++------------+------------+------------+------------+------------+------------+
+
+Directories
++------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                             | files      | code       | comment    | blank      | total      |
++------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                |         19 |        179 |        -15 |         29 |        193 |
+| css                                                              |          8 |         68 |          0 |         19 |         87 |
+| src                                                              |         10 |         92 |        -15 |          8 |         85 |
+| src\components                                                   |          9 |         75 |          0 |         10 |         85 |
+| src\components\Navbar                                            |          2 |         11 |          0 |         -2 |          9 |
+| src\components\base                                              |          2 |         17 |          0 |          3 |         20 |
+| util                                                             |          1 |         19 |          0 |          2 |         21 |
++------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| filename                                                         | language   | code       | comment    | blank      | total      |
++------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| c:\Users\chuga\Documents\Italio\css\cart.css                     | CSS        |          0 |          0 |          1 |          1 |
+| c:\Users\chuga\Documents\Italio\css\content.css                  | CSS        |         -1 |          0 |          5 |          4 |
+| c:\Users\chuga\Documents\Italio\css\modal.css                    | CSS        |         18 |          0 |          2 |         20 |
+| c:\Users\chuga\Documents\Italio\css\navbar.css                   | CSS        |         38 |          0 |          8 |         46 |
+| c:\Users\chuga\Documents\Italio\css\product.css                  | CSS        |          3 |          0 |          0 |          3 |
+| c:\Users\chuga\Documents\Italio\css\products.css                 | CSS        |          0 |          0 |          1 |          1 |
+| c:\Users\chuga\Documents\Italio\css\select.css                   | CSS        |          6 |          0 |          2 |          8 |
+| c:\Users\chuga\Documents\Italio\css\style.css                    | CSS        |          4 |          0 |          0 |          4 |
+| c:\Users\chuga\Documents\Italio\src\components\App.js            | JavaScript |          5 |          0 |          1 |          6 |
+| c:\Users\chuga\Documents\Italio\src\components\Cart.js           | JavaScript |         11 |          0 |          2 |         13 |
+| c:\Users\chuga\Documents\Italio\src\components\Content.js        | JavaScript |          0 |          0 |          2 |          2 |
+| c:\Users\chuga\Documents\Italio\src\components\Navbar\Product.js | JavaScript |         -9 |          0 |         -2 |        -11 |
+| c:\Users\chuga\Documents\Italio\src\components\Navbar\index.js   | JavaScript |         20 |          0 |          0 |         20 |
+| c:\Users\chuga\Documents\Italio\src\components\Product.js        | JavaScript |          9 |          0 |          2 |         11 |
+| c:\Users\chuga\Documents\Italio\src\components\Products.js       | JavaScript |         22 |          0 |          2 |         24 |
+| c:\Users\chuga\Documents\Italio\src\components\base\Modal.js     | JavaScript |          9 |          0 |          2 |         11 |
+| c:\Users\chuga\Documents\Italio\src\components\base\Select.js    | JavaScript |          8 |          0 |          1 |          9 |
+| c:\Users\chuga\Documents\Italio\src\reducer.js                   | JavaScript |         17 |        -15 |         -2 |          0 |
+| c:\Users\chuga\Documents\Italio\util\storage.js                  | JavaScript |         19 |          0 |          2 |         21 |
+| Total                                                            |            |        179 |        -15 |         29 |        193 |
++------------------------------------------------------------------+------------+------------+------------+------------+------------+

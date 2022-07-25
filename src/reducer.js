@@ -147,7 +147,7 @@ const actions = {
     storage.set(key, state[key]);
   },
   remove(state, { key, id }) {
-    state[key] = state[key].filter(i => i.id === id);
+    state[key] = state[key].filter((_i, index) => index !== Number(id));
     storage.set(key, state[key]);
   },
   display(state, payload) {

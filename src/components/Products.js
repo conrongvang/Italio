@@ -10,13 +10,14 @@ function Products({ products }) {
                     key: 'products',
                     data: {
                         name: 'Kem bạc hà',
-                        price: 50000
+                        price: 50000,
+                        src: 'https://italio.vn/wp-content/uploads/2021/08/icon.png'
                     }
                 })"
             >
                 Add Product
             </button>
-            ${products.map(p => Product(p))}
+            ${products.map((p, index) => Product({ ...p, index }))}
         </div>
     `;
 }
