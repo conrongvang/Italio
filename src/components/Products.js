@@ -4,7 +4,7 @@ import Product from "./Product.js";
 
 function Products({ products }) {
     return html`
-        <div class="products">
+        <div class="products-wrapper">
             <button
                 onclick="dispatch('add', {
                     key: 'products',
@@ -17,7 +17,9 @@ function Products({ products }) {
             >
                 Add Product
             </button>
-            ${products.map((p, index) => Product({ ...p, index }))}
+            <ul class="products">
+                ${products.map((p, index) => Product({ ...p, index }))}
+            <ul>
         </div>
     `;
 }

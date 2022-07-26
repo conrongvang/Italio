@@ -18,11 +18,6 @@ function Content(props) {
         <div class='folder'>
             <h3 style="color:#0693e3;">SẢN PHẨM CỦA CHÚNG TÔI</h3>
             ${imgs.map(src => html`<img src=${src} width="300" height="225"></img>`)}
-            ${
-                props
-                && props.products
-                && props.products.map(p => Product(p))
-            }
             <p> về chúng tôi</p>
             <h1 style="color:#0693e3;"> italio - Công Ty Sản Xuất Kem Ý Gelato </h1>
          

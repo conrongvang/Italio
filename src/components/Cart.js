@@ -2,10 +2,12 @@ import html from "../core.js";
 import { connect } from "../store.js";
 import Product from "./Product.js";
 
-function Cart({ cart, products }) {
+function Cart({ cart }) {
     return html`
         <div class="cart">
-            ${products.map(p => Product(p))}
+            <ul class="products">
+                ${cart.map((p, index) => Product({ ...p, index, isCart: true }))}
+            </ul>
         </div>
     `;
 }
