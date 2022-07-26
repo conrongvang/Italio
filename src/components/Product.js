@@ -1,27 +1,28 @@
 import html from "../core.js";
 
 function Product(props) {
-    console.log('props:', props)
+    const { name, src, price, index, isCart } = props;
+
     return html`
         <li class="product">
-            <img src='${props.src}' width=300 height=300/>
-            <span>${props.name}: ${props.price}</span>
+            <img src='${src}' width=300 height=300/>
+            <span>${name}: ${price}</span>
             <button
                 onclick="dispatch('remove', {
-                    key: 'cart',
-                    id: '${props.index}'
+                    key: '${!isCart ? 'products' : 'cart'}',
+                    id: '${index === 0 ? '0' : index}'
                 })"
             >
-                ${!props.isCart ? 'Remove Product' : 'Unselect this product'}
+                ${!isCart ? 'Remove Product' : 'Unselect this product'}
             </button>
-            ${!props.isCart
+            ${!isCart
             && html`<button
                 onclick="dispatch('add', {
-                    key: ${!props.isCart ? 'products' : 'cart'},
+                    key: '${isCart ? 'products' : 'cart'}',
                     data: {
-                        name: '${props.name}',
-                        price: '${props.price}',
-                        src: '${props.src}'
+                        name: '${name}',
+                        price: '${price}',
+                        src: '${src}'
                     }
                 })"
             >
