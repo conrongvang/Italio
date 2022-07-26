@@ -6,14 +6,14 @@ function Product(props) {
     return html`
         <li class="product">
             <img src='${src}' width=300 height=300/>
-            <span>${name}: ${price}</span>
+            <span>${name}</span>
             <button
                 onclick="dispatch('remove', {
                     key: '${!isCart ? 'products' : 'cart'}',
                     id: '${index === 0 ? '0' : index}'
                 })"
             >
-                ${!isCart ? 'Remove Product' : 'Unselect this product'}
+                ${!isCart ? 'Xóa Sản Phẩm' : 'Xóa Trong Giỏ Hàng'}
             </button>
             ${!isCart
             && html`<button
@@ -26,11 +26,33 @@ function Product(props) {
                     }
                 })"
             >
-                Add to cart
+                Thêm vào giỏ hàng
             </button>`}
-
+           <div id="productDetail " class="navbar__bar--item" onclick="dispatch('display', 'productDetail ')">
+           <a href="#" class="content__bar--item link">
+           Đọc Tiếp
+                                </a>
+                                </div>         
         </li>
+        
     `;
 }
+
+// !isCart && hmtml`...`
+// if (isCart === false) {
+//  return html`...`;
+// } else {
+//  return false;  
+// }
+
+// isCart || html`...`
+// isCart ?? html`...`
+
+// '${isCart ? 'products' : 'cart'}'
+// if (isCart === true) {
+//     return 'products';
+// } else {
+//     return 'cart';
+// }
 
 export default Product;
