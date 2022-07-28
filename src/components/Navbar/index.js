@@ -4,6 +4,8 @@ import Select from '../base/Select.js'
 import Modal from '../base/Modal.js'
 
 function Navbar({ menu, cart }) {
+    const cc = 'test git';
+
     return html`
         <div class='navbar'>
             <div class='navbar__introduce'>
